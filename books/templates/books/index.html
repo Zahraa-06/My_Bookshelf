@@ -1,0 +1,45 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/books/book-index.css' %}" />
+{% endblock %} 
+{% block content %}
+
+<section class="page-header">
+    <h1>My Book Library</h1>
+    <img src="{% static 'images/book-stack.svg' %}" alt="Stack of books" />
+    <img src="{% static 'images/open-book.svg' %}" alt="Open book" />
+    <img src="{% static 'images/reading-glasses.svg' %}" alt="Reading glasses" />
+    <img src="{% static 'images/bookmark.svg' %}" alt="Bookmark" />
+</section>
+
+<section class="card-container">
+    {% for book in book_list %}
+    <div class="card">
+        <a href="{% url 'book-detail' book.id %}">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="{% static 'images/book-cover.svg' %}" alt="Book cover" />
+                </div>
+                <h2 class="card-title">{{ book.title }}</h2>
+                <p>by {{ book.author }}</p>
+                <p><strong>Status:</strong> {{ book.get_status_display }}</p>
+                {% if book.rating %}
+                    <p><strong>Rating:</strong> {{ book.rating }}/5 stars</p>
+                {% endif %}
+                <p><small>{{ book.review|truncatewords:10 }}</small></p>
+            </div>
+        </a>
+    </div>
+    {% empty %}
+    <div class="card">
+        <div class="card-content">
+            <h2>No books yet!</h2>
+            <p>Add your first book to get started.</p>
+            <a href="{% url 'book-create' %}" class="btn submit">Add a Book</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

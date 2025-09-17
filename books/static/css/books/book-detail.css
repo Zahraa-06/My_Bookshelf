@@ -1,0 +1,34 @@
+.book-meta {
+  background: var(--button-bg);
+  padding: 15px;
+  border-radius: var(--card-border-radius);
+  margin: 15px 0;
+  border: var(--borders);
+}
+
+.book-meta h3 {
+  margin-top: 0;
+  color: var(--text-color);
+  font-size: var(--font-l);
+}
+
+.book-review {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: var(--card-border-radius);
+  border-left: 4px solid var(--submit);
+  margin: 15px 0;
+}
+
+.book-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.rating-stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
