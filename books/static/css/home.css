@@ -3,6 +3,118 @@ main {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+main > section {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-logo-container {
+  display: none;
+}
+
+.logo-container {
+  max-width: 375px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.book-container {
+  width: 80%;
+  transition: var(--transition);
+}
+
+.book-container:hover {
+  transform: scale(1.05);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  animation: slideIn 0.8s ease-out;
+}
+
+.login h1 {
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  margin: 0 0 20px;
+  color: var(--text-color);
+}
+
+.login > p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.login label {
+  font-size: var(--font-reg);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login input {
+  font-size: var(--font-l);
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.login input:focus {
+  outline: none;
+  border-color: var(--submit);
+  box-shadow: 0 0 0 3px rgba(26, 128, 0, 0.1);
+}
+
+.login .btn {
+  align-self: stretch;
+  margin-right: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    justify-content: space-around;
+    gap: 40px;
+  }
+
+  main > section {
+    width: 45%;
+  }
+
+  .login {
+    border: var(--borders);
+    padding: 30px;
+  }
+
+  .logo-container {
+    max-width: 520px;
+  }
+}
+
+
+
+/* main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   height: 100%;
 }
 
@@ -83,4 +195,4 @@ main > section {
   .logo-container {
     max-width: 520px;
   }
-}
+} */

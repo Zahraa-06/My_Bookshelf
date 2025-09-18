@@ -1,6 +1,54 @@
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.book-status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-status-badge:hover {
+  transform: scale(1.05);
+}
+
+.status-want-to-read {
+  background-color: var(--warn);
+  color: white;
+}
+
+.status-reading {
+  background-color: var(--submit);
+  color: white;
+}
+
+.status-read {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.book-rating {
+  color: #ffc107;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.book-rating:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* .book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px 0;
 }
@@ -31,4 +79,4 @@
 .book-rating {
   color: #ffc107;
   font-size: 1.1rem;
-}
+} */
