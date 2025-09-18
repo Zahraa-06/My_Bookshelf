@@ -27,6 +27,9 @@ Personal Book Tracker is a full-stack web application built with Django that all
 - **Styling**: Custom CSS with professional design system
 - **Authentication**: Django's built-in authentication system
 
+## ERD 
+![ERD](/books/assets/ERD.png)
+
 ## Project Structure
 
 ```
@@ -208,6 +211,10 @@ MY-BOOKSHELF/
 - Firefox 88+
 - Safari 14+
 - Edge 90+
+
+## Links
+1. Repo: [My_Bookshelf](https://github.com/Zahraa-06/My_Bookshelf)
+2. Trello: [Trello](https://trello.com/invite/b/68c9c9b5793f052e45e32416/ATTI69ba31e86e59e5a4376eee651b2244e57EB03567/my-bookshelf-trello)
 
 ## License
 
