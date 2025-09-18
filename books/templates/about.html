@@ -1,9 +1,137 @@
+<!-- templates/about.html -->
 {% extends 'base.html' %} 
-{% block content %}
-<h1>About Personal Book Tracker</h1>
-<hr />
-<p class="page-content">
-  Track your reading journey with our simple and elegant book management system. 
-  Keep track of books you want to read, are currently reading, and have completed.
-</p>
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
 {% endblock %}
+{% block content %}
+
+<div class="about-container">
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>About Personal Book Tracker</h1>
+                <p class="hero-subtitle">Your digital companion for organizing and tracking your reading journey</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="section-content">
+            <h2>Our Mission</h2>
+            <p class="mission-text">
+                Personal Book Tracker was created to help book lovers organize their reading experiences in a simple, 
+                elegant way. We believe that tracking your reading journey should be as enjoyable as the books themselves.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <h2>What Makes Us Special</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Organize Your Library</h3>
+                <p>Keep track of books you want to read, are currently reading, and have completed. Never lose track of your next great read.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Rate & Review</h3>
+                <p>Rate books on a 5-star scale and write detailed reviews to remember your thoughts and share recommendations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Search & Filter</h3>
+                <p>Easily find books in your collection by title, author, or reading status. Your personal library at your fingertips.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Access your book collection from any device. Clean, modern interface that works beautifully on desktop and mobile.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Private & Secure</h3>
+                <p>Your reading data is private and secure. Each user has their own personal library that only they can access.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Track Progress</h3>
+                <p>View statistics about your reading habits and see your progress over time with our intuitive dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="tech-section">
+        <div class="section-content">
+            <h2>Built with Modern Technology</h2>
+            <p>Personal Book Tracker is built using industry-standard technologies to ensure reliability, security, and performance:</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>Django Framework</strong>
+                    <span>Robust Python web framework for the backend</span>
+                </div>
+                <div class="tech-item">
+                    <strong>SQLite Database</strong>
+                    <span>Reliable data storage for your book collection</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Responsive CSS</strong>
+                    <span>Modern styling that works on all devices</span>
+                </div>
+                <div class="tech-item">
+                    <strong>User Authentication</strong>
+                    <span>Secure login system to protect your data</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="developer-section">
+        <div class="section-content">
+            <h2>About the Developer</h2>
+            <p>
+                This application was developed as part of a software engineering project to demonstrate 
+                full-stack web development skills using Django. The focus was on creating a clean, 
+                user-friendly interface while implementing solid backend architecture and database design.
+            </p>
+            <p>
+                The project showcases CRUD operations, user authentication, responsive design, 
+                and modern web development best practices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Get Started CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Start Your Reading Journey Today</h2>
+            <p>Join thousands of readers who are organizing their book collections with Personal Book Tracker.</p>
+            {% if not user.is_authenticated %}
+                <div class="cta-buttons">
+                    <a href="{% url 'signup' %}" class="btn submit">Create Account</a>
+                    <a href="{% url 'home' %}" class="btn secondary">Login</a>
+                </div>
+            {% else %}
+                <div class="cta-buttons">
+                    <a href="{% url 'book-index' %}" class="btn submit">View My Library</a>
+                    <a href="{% url 'book-create' %}" class="btn secondary">Add a Book</a>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+

@@ -337,10 +337,6 @@ nav li {
     flex-wrap: nowrap;
   }
 
-  .header-logo-container {
-    width: 213px;
-  }
-
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {
       background: var(--nav-bg);
@@ -395,6 +391,13 @@ nav li {
       backdrop-filter: blur(3px);
     }
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 
