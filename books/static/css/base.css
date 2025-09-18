@@ -11,14 +11,14 @@ html {
 
 :root {
   font-size: 62.5%;
-  --nav-bg: rgba(104, 197, 248, 0.7);
-  --nav-bg-ff: rgba(104, 197, 248, 0.9);
-  --borders: rgb(36, 116, 248) solid 2px;
+  --nav-bg: rgba(255, 255, 255, 0.547);
+  --nav-bg-ff: rgba(255, 255, 255, 0.547);
+  --borders: rgb(124, 124, 124) solid 2px;
   --text-color: rgb(17, 20, 17);
-  --link-hover-color: rgb(16, 56, 158);
+  --link-hover-color: rgb(75, 75, 75);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
+  --submit: rgb(150, 150, 150);
   --warn: rgb(255, 102, 0);
   --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
@@ -43,11 +43,12 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  background-image: url('../images/background.jpg')
 }
 
 header {
   width: 100%;
-  background: var(--nav-bg-ff); 
+  /* background: var(--nav-bg-ff);  */
   border-bottom: var(--borders);
   transition: var(--transition);
   z-index: 1000;
@@ -261,7 +262,7 @@ nav li {
 }
 
 .card {
-  background: white;
+  background: rgba(255, 255, 255, 0.547);
   border-radius: var(--card-border-radius);
   overflow: hidden;
   box-shadow: var(--card-box-shadow);
@@ -340,8 +341,8 @@ nav li {
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {
       background: var(--nav-bg);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
     }
   }
 }
@@ -363,8 +364,7 @@ nav li {
   nav,
   .header-logo-container {
     margin: 0;
-    background: var(--nav-bg-ff);
-    border: var(--borders);
+    background:rgba(255, 255, 255, 0.547);
     border-radius: 18px;
   }
 
@@ -386,7 +386,7 @@ nav li {
 
     nav,
     .header-logo-container {
-      background: rgba(104, 197, 248, 0.6);
+      background: rgba(255, 255, 255, 0.547);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
@@ -396,8 +396,6 @@ nav li {
 .form {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 

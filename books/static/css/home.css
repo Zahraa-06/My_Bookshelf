@@ -41,7 +41,7 @@ main > section {
   align-items: center;
   width: 100%;
   max-width: 400px;
-  background: white;
+  background: rgba(255, 255, 255, 0.547);
   padding: 30px;
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
@@ -99,7 +99,6 @@ main > section {
   }
 
   .login {
-    border: var(--borders);
     padding: 30px;
   }
 

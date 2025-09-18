@@ -25,7 +25,7 @@
   width: 50vw;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.547);
   padding: 25px;
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);

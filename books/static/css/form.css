@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.547);
   padding: 30px;
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
@@ -33,7 +33,6 @@ td > * {
   width: 100%;
   padding: 10px 15px;
   font-size: var(--font-l);
-  border: 1px solid #ddd;
   border-radius: 6px;
   transition: var(--transition);
 }
